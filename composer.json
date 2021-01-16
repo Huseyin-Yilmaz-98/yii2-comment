@@ -1,0 +1,47 @@
+{
+    "name": "huseyinyilmaz/yii2-comment",
+    "description": "Yii2 Comment Module",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "yagiztr",
+        "email": "yagizturer@gmail.com",
+        "role": "Developer"
+      },
+      {
+        "name": "huseyinyilmaz",
+        "email": "ylmzhsyn98@gmail.com",
+        "role": "Developer"
+      },
+      {
+        "name": "xedeer",
+        "email": "akinozbay1999@gmail.com",
+        "role": "Developer"
+      }
+    ],
+    "require": {
+      "php": ">=7.0",
+      "yiisoft/yii2": "~2.0.13",
+      "ylmzhsyn/yii2-movie": "dev-main"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "8.*.*"
+    },
+    "autoload": {
+      "psr-4": {
+        "huseyinyilmaz\\comment\\": "src"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "huseyinyilmaz\\comment\\tests\\": "tests"
+      }
+    },
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://asset-packagist.org"
+      }
+    ]
+  }
