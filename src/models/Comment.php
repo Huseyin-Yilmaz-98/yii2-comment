@@ -3,7 +3,7 @@
 namespace huseyinyilmaz\comment\models;
 
 use Yii;
-use ylmzhsyn\movie\models\Movie;
+use yagiztr\movie\models\Movie;
 use common\models\User;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
