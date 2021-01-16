@@ -23,7 +23,7 @@
     "require": {
       "php": ">=7.0",
       "yiisoft/yii2": "~2.0.13",
-      "ylmzhsyn/yii2-movie": "dev-main"
+      "yagiztr/yii2-movie": "dev-main"
     },
     "require-dev": {
       "phpunit/phpunit": "8.*.*"
