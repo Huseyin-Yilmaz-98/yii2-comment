@@ -22,7 +22,7 @@ Tüm özelliklerin düzgün çalışması için bu üç modülün birlikte kurul
 
 -----------------
 
-Tüm modüllerin düzgün kurulması için, advanced projesi dizininde şu kodlar çalıştırılmalıdır:
+PHP 7 sürümlerinden birini gerektirir. Tüm modüllerin düzgün kurulması için, advanced projesi dizininde şu kodlar çalıştırılmalıdır:
 
     php requirements.php
     php init
