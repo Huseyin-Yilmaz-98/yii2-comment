@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\comment\models;
+namespace huseyinyilmaz\comment\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
