@@ -22,13 +22,20 @@ Tüm özelliklerin düzgün çalışması için bu üç modülün birlikte kurul
 
 -----------------
 
-PHP 7 sürümlerinden birini gerektirir. Tüm modüllerin düzgün kurulması için, advanced projesi dizininde şu kodlar çalıştırılmalıdır:
+PHP 7 sürümlerinden birini gerektirir. Tüm modüllerin düzgün kurulması için önce şu iki komutla proje başlatılmalıdır:
+
 
     php requirements.php
     php init
+
+
+Daha sonra da bu komutlarla modüller kurulmalıdır:
+
+
     composer require yagiztr/yii2-movie "dev-main"
     composer require huseyinyilmaz/yii2-comment "dev-main"
     composer require xedeer/yii2-watchlist "dev-main"
+
 
 Böylece tüm modüller kurulmuş olur.
 
