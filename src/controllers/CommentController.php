@@ -30,6 +30,29 @@ class CommentController extends Controller
         ];
     }
 
+    public function actionLike()
+    {
+        $params = Yii::$app->request->queryParams;
+        $comment_id = $params["comment_id"];
+        $user_id = Yii::$app->user->id;
+        $result = CommentLike::find()->andWhere("comment_id=$comment_id")->andWhere("user_id=$user_id")->all();
+        if (sizeof($result) == 0) {
+            $comment_like = new CommentLike();
+            $comment_like->comment_id = $comment_id;
+            $comment_like->user_id = $user_id;
+            $comment_like->save();
+        } else {
+            $result[0]->delete();
+        }
+        return \Yii::createObject([
+            'class' => 'yii\web\Response',
+            'format' => \yii\web\Response::FORMAT_JSON,
+            'data' => [
+                "success" => true
+            ],
+        ]);
+    }
+
     /**
      * Lists all Comment models.
      * @return mixed
@@ -37,7 +60,7 @@ class CommentController extends Controller
     public function actionIndex()
     {
         $searchModel = new CommentSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams, Yii::$app->user->id);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -124,28 +147,5 @@ class CommentController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
-    public function actionLike()
-    {
-        $params = Yii::$app->request->queryParams;
-        $comment_id = $params["comment_id"];
-        $user_id = Yii::$app->user->id;
-        $result = CommentLike::find()->andWhere("comment_id=$comment_id")->andWhere("user_id=$user_id")->all();
-        if (sizeof($result) == 0) {
-            $comment_like = new CommentLike();
-            $comment_like->comment_id = $comment_id;
-            $comment_like->user_id = $user_id;
-            $comment_like->save();
-        } else {
-            $result[0]->delete();
-        }
-        return \Yii::createObject([
-            'class' => 'yii\web\Response',
-            'format' => \yii\web\Response::FORMAT_JSON,
-            'data' => [
-                "success" => true
-            ],
-        ]);
     }
 }

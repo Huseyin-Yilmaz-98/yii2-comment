@@ -38,7 +38,7 @@ class CommentSearch extends Comment
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
+    public function search($params, $user_id)
     {
         $query = Comment::find();
 
@@ -59,7 +59,7 @@ class CommentSearch extends Comment
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'user_id' => $this->user_id,
+            'user_id' => $user_id,
             'movie_id' => $this->movie_id,
             'created_at' => $this->created_at,
         ]);

@@ -41,11 +41,19 @@ Böylece tüm modüller kurulmuş olur.
 
 -----------------
 
-Bu modüller kurulduktan sonra, projede tanımlı isme sahip bir veritabanınız olduğunu doğrulayın ve advanced projesinde console klasöründe bulunan migration klasörüne, vendor klasöründeki yagiztr altında bulunan yii2-movie dizinindeki src klasöründe yer alan migrations klasörünün içeriği kopyalanmalıdır. Bu migration dosyaları kopyalandıktan sonra ana dizinde "php yii migrate" komutu çalıştırılarak veritabanı uygun hale getirilmektedir. Ancak advanced projesiyle birlikte inmiş olan user tablosu migration dosyası da silinmemiş olmalıdır. Çünkü modüller user tablosunun id sütunu sayesinde bilgi tutmaktadır. Migration esnasında tablolar oluşturulduğu gibi, kategoriler otomatik olarak tanımlanmakta ayrıca demo amacıyla dört adet film eklenmektedir.
+Bu modüller kurulduktan sonra, projede tanımlı isme sahip bir veritabanınız olduğunu doğrulayın ve daha sonra aşağıdaki komutla projenizin ana tablolarını yükleyin:
+
+    php yii migrate
+
+Daha sonra da aşağıdaki komutla üç modül için de gerekli tabloları oluşturabilirsiniz:
+
+    php yii migrate --migrationPath=@vendor/yagiztr/yii2-movie/src/migrations/
+
+Bunun sonucunda tablolar oluştuğu gibi demo amaçlı dört adet de film tanımlanacaktır.
 
 -----------------
 
-Daha sonra, fronted dizinindeki config klasöründe yer alan main.php dosyasının return arrayine şu girdi eklenerek modüller uygulamaya tanıtılmalıdır:  
+Daha sonra, frontend dizinindeki config klasöründe yer alan main.php dosyasının return arrayine şu girdi eklenerek modüller uygulamaya tanıtılmalıdır:  
 
 
     "modules" => [
@@ -69,7 +77,7 @@ Eğer ki proje URL biçimlendirilmesinde bir düzenleme yapılmadıysa http://al
 
 -----------------
 
-Yorum modülü ayrı sayfalarda kullanılmak üzere tasarlanmadı. İşlevleri yalnızca film sayfalarından kontrol edilebilmektedir. Eğer ki giriş yapmamış olsanız dahi diğer kullanıcıların yaptığı yorumları görüntüleyebilirsiniz. Ancak yeni bir yorum paylaşmak veya diğer kullanıcıların paylaştığı yorumları beğenmek için siteye giriş yapmış olmanız gerekmektedir. Ayrıca yorumları yalnızca paylaşan kullanıcı silebilmektedir. Bir yorum beğenildiğinde sayfa yenilenmez, bunun yerine anlık olarka beğeni sayısı güncellenir ve bu işlem sırasında bir hata olduysa uyarı penceresi gözüküp hata sebebini kullanıcıya bildirir.
+Yorum modülü ayrı sayfalarda kullanılmak üzere tasarlanmadı. İşlevleri yalnızca film sayfalarından kontrol edilebilmektedir. Eğer ki giriş yapmamış olsanız dahi diğer kullanıcıların yaptığı yorumları görüntüleyebilirsiniz. Ancak yeni bir yorum paylaşmak veya diğer kullanıcıların paylaştığı yorumları beğenmek için siteye giriş yapmış olmanız gerekmektedir. Ayrıca yorumları yalnızca paylaşan kullanıcı silebilmektedir. Bir yorum beğenildiğinde sayfa yenilenmez, bunun yerine anlık olarak beğeni sayısı güncellenir ve bu işlem sırasında bir hata olduysa uyarı penceresi gözüküp hata sebebini kullanıcıya bildirir.
 
 -----------------
 
