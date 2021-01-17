@@ -104,10 +104,10 @@ Giriş yapılmadığında film sayfasında başkasının yorumları görüntüle
 Kendi yorumlarımızda yorumu silme seçeneği de aktifleşmektedir:
 ![Logged In Owner](https://github.com/Huseyin-Yilmaz-98/yii2-comment/blob/main/src/images/loggedinowner.png)
 
-Başkalarının yorumları beğenilebilmekte ancak silme seçeneği etkisiz kalmaktadır:
+! Başkalarının yorumları beğenilebilmekte ancak silme seçeneği etkisiz kalmaktadır:
 ![Logged In Not Owner](https://github.com/Huseyin-Yilmaz-98/yii2-comment/blob/main/src/images/loggedinnotowner.png)
 
-Beğendiğimiz yorumlarda beğeni butonunun rengi değişmektedir:
+! Beğendiğimiz yorumlarda beğeni butonunun rengi değişmektedir:
 ![Liked](https://github.com/Huseyin-Yilmaz-98/yii2-comment/blob/main/src/images/liked.png)
 
 
