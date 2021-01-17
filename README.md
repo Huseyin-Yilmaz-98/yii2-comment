@@ -73,15 +73,42 @@ Bundan sonra modüller uygulamaya tanıtılmış olur.
 
 -----------------
 
+### Film Modülü
 Eğer ki proje URL biçimlendirilmesinde bir düzenleme yapılmadıysa http://alanadi/frontend/web/index.php?r=movie adresine giderek film listesi görüntülenebilir. Burada kategoriye göre film listeleme, isme veya yapın yılına göre film arama gibi özellikler bulunmaktadır. Bu açılan sayfadan yeni bir film girdisi oluşturulabileceği gibi her satırın sonunda bulunan işarete tıklanarak filmin sayfasına gidilebilir. Film sayfasında filmin konusu, yapım yılı, ismi, posteri gibi bilgiler görüntülenebileceği gibi, diğer iki modül de kurulduysa film listesi ve yorum özellikleri de kontrol edilebilir. Eğer ki bu iki modülden biri kurulmadıysa, ilgili alanda durumu açıklayan bir uyarı görünmektedir. Ayrıca filmler düzenlenebilir ve kategori gibi bilgileri yeniden belirlenebilir.
 
 -----------------
 
+### Yorum Modülü
 Yorum modülü ayrı sayfalarda kullanılmak üzere tasarlanmadı. İşlevleri yalnızca film sayfalarından kontrol edilebilmektedir. Eğer ki giriş yapmamış olsanız dahi diğer kullanıcıların yaptığı yorumları görüntüleyebilirsiniz. Ancak yeni bir yorum paylaşmak veya diğer kullanıcıların paylaştığı yorumları beğenmek için siteye giriş yapmış olmanız gerekmektedir. Ayrıca yorumları yalnızca paylaşan kullanıcı silebilmektedir. Bir yorum beğenildiğinde sayfa yenilenmez, bunun yerine anlık olarak beğeni sayısı güncellenir ve bu işlem sırasında bir hata olduysa uyarı penceresi gözüküp hata sebebini kullanıcıya bildirir.
 
 -----------------
 
+### İzleme Listesi Modülü
 İzleme listesi modülü ise yalnızca giriş yapmış kullanıcıların faydalanabileceği bir özelliktir. Yine URL biçimlendirmesinde bir düzenleme yapılmadıysa, siteye giriş yaptıktan sonra http://alanadi/frontend/web/index.php?r=watchlist adresine giderek daha önceden oluşturduğunuz film listeleri görüntülenebilir. Yalnızca o anda giriş yapmış olan kullanıcının listeleri görünür. Bu sayfadan daha önce oluşturduğunuz listelerin sayfasına gidebileceğiniz gibi yukarıdaki butona tıklayarak yeni bir film listesi de oluşturabilirsiniz. Herhangi bir listenin sayfasına girildiğinde o listeye eklenmiş filmler listelenir ve doğrudan film adına tıklanarak filmin sayfasına erişilebilir. Ayrıca film sayfalarında o anda görüntülenen filmi listeye ekleme ve listeden çıkarma özelliği bulunur. Yine burada yalnızca kendi listeleriniz üstünde işlem yapabilirsiniz. Daha önce filmi eklediğiniz listeler ayrı bir alanda, eklemediğiniz listeler ise ayrı bir alanda görünür. Çoklu seçim ile listelere filmi ekleme veya listeden çıkarma işlemleri yapılabilir.
+
+### Film Modülü Resimler
+
+### Yorum Modülü Resimler
+Giriş yapılmadığında index sayfası şöyle bir uyarı vermektedir:
+![Index Page Logged Out](https://github.com/Huseyin-Yilmaz-98/yii2-comment/blob/main/src/images/indexloggedout.png)
+
+Giriş yapıldığında da kullanıcının yaptığı yorumlar böyle gözükmekte, film adına tıklanarak film sayfasına gidilebilmekte ve yorum doğrudan listeden silinebilmekte:
+![Index Page Logged In](https://github.com/Huseyin-Yilmaz-98/yii2-comment/blob/main/src/images/index.png)
+
+Film sayfasında hiç yorum yoksa durumu belirten bir yazı çıkmaktadır:
+![No comment](https://github.com/Huseyin-Yilmaz-98/yii2-comment/blob/main/src/images/nocomment.png)
+
+Giriş yapılmadığında film sayfasında başkasının yorumları görüntülenebilmekte ama beğenme ve yeni yorum yapılamamaktadır:
+![Logged Out](https://github.com/Huseyin-Yilmaz-98/yii2-comment/blob/main/src/images/loggedout.png)
+
+Kendi yorumlarımızda yorumu silme seçeneği de aktifleşmektedir:
+![Logged In Owner](https://github.com/Huseyin-Yilmaz-98/yii2-comment/blob/main/src/images/loggedinowner.png)
+
+Başkalarının yorumları beğenilebilmekte ancak silme seçeneği etkisiz kalmaktadır:
+![Logged In Not Owner](https://github.com/Huseyin-Yilmaz-98/yii2-comment/blob/main/src/images/loggedinnotowner.png)
+
+Beğendiğimiz yorumlarda beğeni butonunun rengi değişmektedir:
+![Liked](https://github.com/Huseyin-Yilmaz-98/yii2-comment/blob/main/src/images/liked.png)
 
 
 
