@@ -15,7 +15,7 @@ Modüller:
 
 -----------------
 
-Yukarıda belirtilen modüllerin hepsi ortak katkıyla yazılmıştır, birlikte notlandırılması rica olunur.  
+Yukarıda belirtilen modüller ayrı ayrı yüklenmiş olsa da hepsi aynı derecede ortak katkıyla yazılmıştır, birlikte notlandırılması rica olunur.  
 Movie modülü, diğer iki modül olmadan da çalışmaktadır ancak film sayfalarında yorum ve izleme listesi özelliğinin çalışması için diğer iki modül de kurulmalıdır.  
 Diğer iki modül ise yüklenirken movie modülünü otomatik olarak kurmaktadırlar.  
 Tüm özelliklerin düzgün çalışması için bu üç modülün birlikte kurulması gerekmektedir.  
@@ -70,6 +70,11 @@ Daha sonra, frontend dizinindeki config klasöründe yer alan main.php dosyasın
 
 
 Bundan sonra modüller uygulamaya tanıtılmış olur.
+
+-----------------
+
+### Veritabanı Bağlantıları
+![Database](https://github.com/yagizturer/yii2-movie/blob/main/src/images/database.png)
 
 -----------------
 
